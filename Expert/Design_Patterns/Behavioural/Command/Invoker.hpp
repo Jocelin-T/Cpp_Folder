@@ -5,16 +5,15 @@
 #include <iostream>
 #include <memory>
 
-
 class Invoker {
 public:
     Invoker() = default;
     Invoker(std::unique_ptr<ICommand> up_command) 
         : m_up_command{ std::move(up_command) }
     {}
-    ~Invoker() {
-        delete m_up_command;
-    }
+    // ~Invoker() {
+    //     delete m_up_command;
+    // }
 
     void setCommand(std::unique_ptr<ICommand> up_command) {
         m_up_command = std::move(up_command);

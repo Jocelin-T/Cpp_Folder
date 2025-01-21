@@ -8,16 +8,15 @@
 
 class ConcreteCommandA : public ICommand {
 public:
-    ConcreteCommandA(Receiver sp_receiver) 
+    ConcreteCommandA(std::shared_ptr<Receiver> sp_receiver) 
         : m_sp_receiver{ sp_receiver }
     {}
 
     void execute() override {
         std::cout << "ConcreteCommandA executed" << '\n';
-        m_sp_receiver.actionA();
+        m_sp_receiver->actionA();
     }
 
 private:
     std::shared_ptr<Receiver> m_sp_receiver;
-    // Receiver m_receiver;
 };

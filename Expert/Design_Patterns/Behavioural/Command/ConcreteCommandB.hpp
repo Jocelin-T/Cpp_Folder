@@ -4,14 +4,19 @@
 #include "Receiver.hpp"
 
 #include <iostream>
+#include <memory>
 
 class ConcreteCommandB : public ICommand {
 public:
+    ConcreteCommandB(std::shared_ptr<Receiver> sp_receiver) 
+        : m_sp_receiver{ sp_receiver }
+    {}
+
     void execute() override {
         std::cout << "ConcreteCommandB executed" << '\n';
-        m_receiver.actionB();
+        m_sp_receiver->actionA();
     }
 
 private:
-    Receiver m_receiver;
+    std::shared_ptr<Receiver> m_sp_receiver;
 };

@@ -22,11 +22,10 @@ int main(){
     Invoker invoker(std::move(up_commandA));
 
     // Create the Invoker and pass the unique pointer to the Invoker
-    Invoker invok(std::make_unique<ConcreteCommandB>());
+    Invoker invok(std::make_unique<ConcreteCommandB>(sp_receiver));
 
     invoker.executeCommand();
     invok.executeCommand();
-
 
     return 0;
 }

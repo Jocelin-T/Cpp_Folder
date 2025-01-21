@@ -8,6 +8,8 @@ std::mutex mtx;
 
 // Function to be run by each thread
 void addMoney() {
+    std::cout << "Thread start\n" ;
+
     // Lock the mutex before entering the critical section
     mtx.lock();
     
@@ -18,6 +20,8 @@ void addMoney() {
     }
     // Unlock the mutex after leaving the critical section
     mtx.unlock();
+
+    std::cout << "Thread done\n" ;
 }
 
 int main() {

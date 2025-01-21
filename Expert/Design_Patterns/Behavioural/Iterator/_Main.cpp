@@ -14,16 +14,16 @@
 int main(){
 
     Container<int> container;
-    
+
     container.add(1);
     container.add(2);
     container.add(3);
     
-    auto it = container.createIterator();
+    auto iterator = container.createIterator();
 
     std::cout << "Start loop trought: " << container.count() << " elements" << '\n';
-    for (it->first(); !it->hasNext(); it->next()) {
-        std::cout << *it->current() << '\n';
+    for (iterator->first(); !iterator->hasNext(); iterator->next()) {
+        std::cout << *iterator->current() << '\n';
     }
 
     return 0;

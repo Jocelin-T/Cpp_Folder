@@ -19,7 +19,7 @@ public:
         std::cout << "Context destroyed" << '\n';
     }
 
-    // Passed by reference when using std::move (rValue) to avoid useless copy
+    // Passed by reference (rValue) when using std::move to avoid useless copy
     void setStrategy(std::unique_ptr<IStrategy>&& p_strategy) {
         m_p_strategy = std::move(p_strategy);
     }

@@ -19,7 +19,7 @@ public:
         std::cout << "Context destroyed" << '\n';
     }
     
-    // Passed by reference when using std::move (rValue) to avoid useless copy
+    // Passed by reference (rValue) when using std::move to avoid useless copy
     void setState(std::unique_ptr<IState>&& p_new_state) {
         m_p_state = std::move(p_new_state);
     }

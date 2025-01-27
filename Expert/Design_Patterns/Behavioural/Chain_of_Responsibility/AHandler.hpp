@@ -11,8 +11,7 @@ public:
         m_p_next_handler = p_handler;
     }
 
-    virtual void handle(int request) {
-
+    virtual void handle(int request) override {
         if (m_p_next_handler != nullptr) {
             m_p_next_handler->handle(request);
         }
@@ -22,7 +21,7 @@ public:
     }
 
 
-private:
+protected:
     IHandler* m_p_next_handler{ nullptr };
 
 };

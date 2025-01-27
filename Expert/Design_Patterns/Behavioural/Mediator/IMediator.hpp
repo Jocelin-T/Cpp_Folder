@@ -1,13 +1,14 @@
 #pragma once
 
-#include "ComponentBase.hpp"
+#include "AComponent.hpp"
 
-#include <iostream>
 #include <string>
 
 class IMediator{
 public:
+    virtual ~IMediator(void) = default;
 
-    virtual void notify(ComponentBase& sender, const std::string& message) = 0;
+    virtual void notify(AComponent* p_sender, const std::string& message) = 0;
+    virtual void operationComponent(AComponent* p_comp) = 0;
 
 };

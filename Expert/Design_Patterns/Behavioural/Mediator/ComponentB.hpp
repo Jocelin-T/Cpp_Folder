@@ -5,15 +5,15 @@
 
 #include <iostream>
 
-class ComponentA : public AComponent {
+class ComponentB : public AComponent {
 public:
 
     void notifyMediator(const std::string& message) override {
-        std::cout << "ComponentA notify mediator: " << message << " World\n";
+        std::cout << "ComponentB notify mediator: " << message << " You\n";
     }
     
     void operationComponent(void) override {
-        std::cout << "ComponentA::operationComponent" << '\n';
+        std::cout << "ComponentB::operationComponent" << '\n';
     }
 
 };

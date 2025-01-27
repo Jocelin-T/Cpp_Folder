@@ -18,11 +18,11 @@
 
 ## SOLID Principles
 ### S -> Single Responsability Principle (SRP) 
-- A Class who focus on a **Single** responsability or purpose.
+- A Class must focus on a **Single** responsability or purpose.
 ### O -> Open/Close Principle (OCP)
 - A Class should be **Open** for extension but **Close** for modification
 ### L -> Liskov Substitution Principle (LSP)
-- The Objects of a Base Class should be **Replacerable** with Objects of it's Derived Class, without affecting the correctness of a program.
+- The Objects of a Base Class should be **Replaceable** with Objects of it's Derived Class, without affecting the correctness of a program.
 ### I -> Interface Segregation Principle (ISP)
 - Clients should **Not be forced** to depend on interfaces they do not use.
 ### D -> Dependency Inversion Principle (DIP)

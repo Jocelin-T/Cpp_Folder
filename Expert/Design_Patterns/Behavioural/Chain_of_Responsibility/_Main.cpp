@@ -1,4 +1,5 @@
 #include "ConcreteHandlerA.hpp"
+#include "ConcreteHandlerB.hpp"
 
 #include <iostream>
 
@@ -11,13 +12,12 @@ int main(){
 
     ConcreteHandlerA handler_a;
     ConcreteHandlerA handler_b;
-    ConcreteHandlerA handler_c;
+    ConcreteHandlerB handler_c;
 
     handler_a.setNext(&handler_b);
     handler_b.setNext(&handler_c);
 
     handler_a.handle(0);
-
 
     return 0;
 }

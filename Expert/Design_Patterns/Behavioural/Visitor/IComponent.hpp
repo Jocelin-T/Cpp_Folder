@@ -2,12 +2,8 @@
 
 #include "IVisitor.hpp"
 
-#include <iostream>
-
-class IVisitor;
-
-class IComponent {
-public:
-    virtual ~IComponent() = default;
-    virtual void accept(IVisitor* p_visitor) = 0;
+class Component {
+ public:
+  virtual ~Component() {}
+  virtual void Accept(Visitor *visitor) const = 0;
 };

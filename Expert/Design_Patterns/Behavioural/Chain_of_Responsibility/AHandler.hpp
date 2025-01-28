@@ -7,6 +7,12 @@
 class AHandler : public IHandler {
 public:
 
+    // Two way to set the next handler
+    AHandler* setNextHandler(AHandler* p_handler) {
+        m_p_next_handler = p_handler;
+        return p_handler;
+    }
+
     void setNext(IHandler* p_handler) override {
         m_p_next_handler = p_handler;
     }

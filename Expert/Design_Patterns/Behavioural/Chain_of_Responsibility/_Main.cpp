@@ -14,8 +14,12 @@ int main(){
     ConcreteHandlerA handler_b;
     ConcreteHandlerB handler_c;
 
-    handler_a.setNext(&handler_b);
-    handler_b.setNext(&handler_c);
+    // handler_a.setNext(&handler_b);
+    // handler_b.setNext(&handler_c);
+    
+    // Other way to set the next handler
+    handler_a.setNextHandler(&handler_b)
+            ->setNextHandler(&handler_c);
 
     handler_a.handle(0);
 

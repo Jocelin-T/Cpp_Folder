@@ -13,14 +13,14 @@ int main(){
 
     ConcreteComponentA comp_a;
 
-    ConcreteDecoratorA dec_a(&comp_a);
-    ConcreteDecoratorB dec_b(&comp_a);
+    ConcreteDecoratorA decorator_a(&comp_a);
+    ConcreteDecoratorB decorator_b(&comp_a);
 
-    dec_a.execute();
+    decorator_a.execute();
     std::cout << '\n';
     
-    dec_b.execute();
-    dec_b.extra();
+    decorator_b.execute();
+    decorator_b.extra();
 
     return 0;
 }
